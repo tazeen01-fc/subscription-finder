@@ -7,6 +7,7 @@ subscriptions, shows what each costs per year, and asks an AI for saving ideas.
 - Upload a CSV with the columns: date, description, amount
 - Detects charges that repeat about every month (3 or more times)
 - Shows a table and the total yearly cost of subscriptions
+- Shows a bar chart of yearly cost per subscription
 - Sends only the merchant names and prices (never the whole CSV) to an AI
   model through the Groq API and shows short saving tips
 
