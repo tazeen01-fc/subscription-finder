@@ -21,10 +21,12 @@ Python, Streamlit, Groq API (free tier)
 5. Upload a CSV, paste your key in the password box, and click "Get AI tips"
 
 ## Example CSV
+```
 date,description,amount
 2026-06-03,Netflix,15.99
 2026-07-03,Netflix,15.99
 2026-08-03,Netflix,15.99
+```
 
 ## Notes
 - The API key is typed into the page and is never saved in the code.
