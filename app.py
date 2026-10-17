@@ -3,6 +3,7 @@ import io
 from datetime import datetime
 
 import streamlit as st
+import pandas as pd
 from groq import Groq
 
 MODEL = "openai/gpt-oss-20b"
@@ -66,6 +67,11 @@ if uploaded is not None:
 
         total = sum(s["Per year"] for s in subs)
         st.metric("Total subscriptions per year", f"{total:.2f}")
+        chart_data = pd.DataFrame(
+            {"Per year": [s["Per year"] for s in subs]},
+            index=[s["Merchant"] for s in subs],
+            )
+        st.bar_chart(chart_data)
 
         st.subheader("AI saving tips")
         api_key = st.text_input("Paste your Groq API key", type="password")
